@@ -1,4 +1,4 @@
-import EventedBase from '@visue/core/base/EventedBase';
+import EventedBase from '@visue/core/EventedBase';
 import get from 'lodash/get';
 import has from 'lodash/has';
 import { I18nResourcesEvents } from './constants';

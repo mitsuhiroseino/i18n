@@ -1,4 +1,4 @@
-import { EventedConfig, EventedEventHandlers } from '@visue/core/base/EventedBase';
+import { EventedConfig, EventedEventHandlers } from '@visue/core/EventedBase';
 import { EventInfo } from '@visue/core/events';
 import { StringFormatterConfig } from '@visue/datakit/formatters/StringFormatter';
 import { FormatOptions } from '@visue/utils/string/format';

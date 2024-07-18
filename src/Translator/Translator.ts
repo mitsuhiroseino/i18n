@@ -1,4 +1,4 @@
-import EventedBase from '@visue/core/base/EventedBase';
+import EventedBase from '@visue/core/EventedBase';
 import { FormatterFactory } from '@visue/datakit/formatters';
 import StringFormatter from '@visue/datakit/formatters/StringFormatter';
 import isString from 'lodash/isString';
