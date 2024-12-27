@@ -1,7 +1,7 @@
 import EventedBase from '@visue/core/EventedBase';
 import get from 'lodash/get';
 import has from 'lodash/has';
-import { I18nResourcesEvents } from './constants';
+import { I18N_RESOURCES_EVENTS } from './constants';
 import { I18nResource, I18nResourcesConfig, I18nResourcesEventHandlers } from './types';
 
 // デフォルトリソースのキー
@@ -40,7 +40,7 @@ class I18nResources extends EventedBase<I18nResourcesEventHandlers, I18nResource
    */
   set(language: string | symbol, resource: I18nResource): void {
     const resourceInfo = this._updateResourceInfo(language, resource, true);
-    this.fire(I18nResourcesEvents.resourceset, { language, resource: resourceInfo.resource });
+    this.fire(I18N_RESOURCES_EVENTS.resourceset, { language, resource: resourceInfo.resource });
   }
 
   /**
@@ -58,7 +58,7 @@ class I18nResources extends EventedBase<I18nResourcesEventHandlers, I18nResource
    */
   update(language: string | symbol, resource: I18nResource): void {
     const resourceInfo = this._updateResourceInfo(language, resource);
-    this.fire(I18nResourcesEvents.resourceupdate, { language, resource: resourceInfo.resource });
+    this.fire(I18N_RESOURCES_EVENTS.resourceupdate, { language, resource: resourceInfo.resource });
   }
 
   /**

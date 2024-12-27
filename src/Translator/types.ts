@@ -3,7 +3,7 @@ import { EventInfo } from '@visue/core/events';
 import { StringFormatterConfig } from '@visue/datakit/formatters/StringFormatter';
 import { FormatOptions } from '@visue/utils/string/format';
 import I18nResources, { I18nResource } from '../I18nResources';
-import { TranslatorEvents } from './constants';
+import { TRANSLATOR_EVENTS } from './constants';
 
 /**
  * translateオプション
@@ -14,7 +14,7 @@ export type TranslateOptions = Pick<FormatOptions, 'params'>;
  * イベントハンドラー
  */
 export type TranslatorEventHandlers = EventedEventHandlers & {
-  [TranslatorEvents.languagechange]: (event: EventInfo<{ language: string }>) => void;
+  [TRANSLATOR_EVENTS.languagechange]: (event: EventInfo<{ language: string }>) => void;
 };
 
 /**

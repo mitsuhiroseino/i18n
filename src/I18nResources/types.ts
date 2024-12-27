@@ -1,6 +1,6 @@
 import { EventedConfig, EventedEventHandlers } from '@visue/core/EventedBase';
 import { EventInfo } from '@visue/core/events';
-import { I18nResourcesEvents } from './constants';
+import { I18N_RESOURCES_EVENTS } from './constants';
 
 /**
  * 国際化リソース
@@ -13,7 +13,7 @@ export type I18nResource = {
  * イベントハンドラー
  */
 export type I18nResourcesEventHandlers = EventedEventHandlers & {
-  [I18nResourcesEvents.resourceset]: (event: EventInfo<{ resource: I18nResource }>) => void;
+  [I18N_RESOURCES_EVENTS.resourceset]: (event: EventInfo<{ resource: I18nResource }>) => void;
 };
 
 /**

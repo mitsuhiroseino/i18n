@@ -3,7 +3,7 @@ import { FormatterFactory } from '@visue/datakit/formatters';
 import StringFormatter from '@visue/datakit/formatters/StringFormatter';
 import isString from 'lodash/isString';
 import I18nResources, { I18nResource } from '../I18nResources';
-import { TranslatorEvents } from './constants';
+import { TRANSLATOR_EVENTS } from './constants';
 import { TranslateOptions, TranslatorConfig, TranslatorEventHandlers, TranslatorInitializeConfig } from './types';
 
 class Translator extends EventedBase<TranslatorEventHandlers, TranslatorConfig> {
@@ -51,7 +51,7 @@ class Translator extends EventedBase<TranslatorEventHandlers, TranslatorConfig> 
     const oldLanuage = this._language;
     if (oldLanuage !== language) {
       this._language = language;
-      this.fire(TranslatorEvents.languagechange, { language });
+      this.fire(TRANSLATOR_EVENTS.languagechange, { language });
     }
   }
 
